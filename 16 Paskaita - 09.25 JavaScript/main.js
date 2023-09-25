@@ -73,7 +73,7 @@ let neSkaicius = '654';
 let zod = 'labas';
 let neMelas = true;
 
-console.group('Aritmetika');
+console.groupCollapsed('Aritmetika');
     console.log('5+23 =', sk1+sk2); // 28
     console.log('5-23 =', sk1-sk2); // -18
     console.log('5*23 =', sk1*sk2); // 115
@@ -88,8 +88,155 @@ console.group('Aritmetika');
     console.log('', neSkaicius*sk2); // 15042
     console.log('', neSkaicius/sk2); // 28.434...
     console.log('', sk2+neSkaicius); // '23654'
-    console.log('', neMelas+sk1);
-    console.log('', neMelas-sk1);
-    console.log('', neMelas*sk1);
-    console.log('', neMelas/sk1);
+    console.log('', neMelas+sk1); // 6
+    console.log('', neMelas-sk1); // -4
+    console.log('', neMelas*sk1); // 5
+    console.log('', neMelas/sk1); // 0.2
+console.groupEnd();
+
+/*      Prilyginimai ir Palyginimai
+    
+        Prilyginimai
+    Naujos reikšmės prilyginimas:
+        let kintamasis = 'labas vakaras';
+        ...
+        kintamasis = 50;
+
+    Trumpiniai: 
+        kintamasis++         - padidina kintamąjį vienetų
+        kintamasis--         - sumažina kintamąjį vienetų
+        kintamasis+=skaicius - padidina kintamąjį nurodyti skaičiumi
+        kintamasis-=skaicius - sumažina kintamąjį nurodyti skaičiumi
+        kintamasis*=skaicius - padaugina kintamąjį nurodyti skaičiumi
+        kintamasis/=skaicius - dalina kintamąjį nurodyti skaičiumi
+        kintamasis**=skaicius - pakelia kintamąjį nurodyti skaičiumi
+        kintamasis%=skaicius - randa liekaną nurodytu skaičiumi ir prilygina tam kintamajam
+
+        Palyginimai
+    > - daugiau
+    < - mažiau
+    >= - daugiau arba lygu 
+    <= - mažiau arba lygu
+    == - ar lygios reikšmės
+    === - ar lygios reikšmės IR tipai
+    != - ar nelygios reikšmės
+    !== - ar nelygios reikšmės IR tipai
+*/
+
+console.groupCollapsed('Prilyginimai');
+    let kintamasis = 'labas vakaras';
+    console.log(kintamasis);
+    kintamasis = 50;
+    console.log(kintamasis);
+    kintamasis = kintamasis + 5;
+    console.log(kintamasis);
+    kintamasis = kintamasis + sk2;
+    console.log(kintamasis);
+    kintamasis+=9;
+    console.log(kintamasis);
+    kintamasis-=sk1;
+    console.log(kintamasis);
+    kintamasis**=1/5
+    console.log(kintamasis);
+console.groupEnd();
+
+console.groupCollapsed('Palyginimai');
+    console.log('10 > 10', 10 > 10);
+    console.log('10 < 10', 10 < 10);
+    console.log('10 > 3', 10 > 3);
+    console.log('10 < 3', 10 < 3);
+    console.log('10 >= 3', 10 >= 3);
+    console.log('10 <= 3', 10 <= 3);
+    console.log('10 <= 10', 10 <= 10);
+    console.log('10 >= 10', 10 >= 10);
+    console.log('10 == 3', 10 == 3);
+    console.log('10 === 3', 10 === 3);
+    console.log('10 == "10"', 10 == "10");
+    console.log('10 === "10"', 10 === "10");
+    console.log('10 != "10"', 10 != "10");
+    console.log('10 !== "10"', 10 !== "10");
+console.groupEnd();
+
+// Užduotys
+
+
+// String
+    let name = 'Justinas';
+    let sureName = 'Jadeska';
+    let years = '29';
+    let nationality = 'Lithuanian';
+    let gender = 'male';
+
+// Numbers
+    let bornYear = 1993;
+    let bornMonth = 11;
+    let bornDay = 7;
+    let howOld = 29;
+    let howYoung = 29;
+
+// Boolean
+    let alive = true;
+    let dead = false;
+    let unknown = false;
+
+console.groupCollapsed('Veiksmai');
+    console.log('7+29', bornDay+howOld);
+    console.log(bornYear+alive);
+    console.log(bornYear+dead);
+    console.log('year'+bornYear);
+    console.log(dead+alive);
+    console.log(alive+nationality);
+    console.log(name+sureName);
+
+    console.log(bornYear-howYoung);
+    console.log(howOld-dead);
+    console.log(bornMonth-years);
+    console.log(alive-dead);
+    console.log(unknown-bornYear);
+    console.log(sureName-gender);
+
+    console.log(howYoung*bornDay);
+    console.log(bornMonth*alive);
+    console.log(bornDay*years);
+    console.log(dead*unknown);
+    console.log(dead*gender);
+    console.log(years*gender);
+
+    console.log(bornYear/bornMonth);
+    console.log(bornDay/alive);
+    console.log(bornYear/years);
+    console.log(alive/dead);
+    console.log(alive/nationality);
+    console.log(name/sureName);
+
+    console.log(bornDay**bornDay);
+    console.log(bornDay**alive);
+    console.log(bornMonth**sureName);
+    console.log(dead**alive);
+    console.log(unknown**years);
+    console.log(years**years);
+console.groupEnd();
+
+console.groupCollapsed('Veiksmai2');
+    console.log(++bornMonth);
+    console.log(++bornDay);
+    console.log(--bornMonth);
+    console.log(bornYear+=3);
+    console.log(bornYear-=3);
+    console.log(bornDay*=3);
+    console.log(bornDay-=3);
+    console.log(bornDay/=2);
+    console.log(bornDay**=2);
+    console.log(bornMonth%=3);
+console.groupEnd();
+
+console.group('Veiksmai3');
+    console.log(bornMonth>bornYear);
+    console.log(bornMonth<bornYear);
+    console.log(bornMonth<=bornYear);
+    console.log(bornMonth>=bornYear);
+    console.log(bornMonth==bornYear);
+    console.log(bornMonth===bornYear);
+    console.log(bornMonth!=bornYear);
+    console.log(bornMonth!==bornYear);
 console.groupEnd();
