@@ -1,0 +1,3 @@
+/* Kintamieji ir sąlygos
+
+*/
