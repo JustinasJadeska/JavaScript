@@ -8,7 +8,7 @@ console.groupEnd();
 /*      Kintamieji / Variables
 
     var / let / const -kintamojo startas, reikia rašyti TIK tuomet, kai nori sukurti,
-    NEREIKIA jo vėl rašyti kai į kintąžamąjį kreipiesi.
+    NEREIKIA jo vėl rašyti kai į kintamąjį kreipiesi.
         var -senasis užrašymas
         let - naujasis užrašymas
         const- naujasis užrašymas skirtas konstantoms.
