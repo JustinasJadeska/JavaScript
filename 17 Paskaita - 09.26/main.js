@@ -322,7 +322,7 @@ console.groupCollapsed('Filmai');
 console.groupEnd();
 
 // Sąlygos (simple)
-
+console.groupCollapsed('Simple');
 let legalAge = 20;
 let clientAge = 25;
     console.log(legalAge);
@@ -356,12 +356,72 @@ let VW = ['VW', 'Audi', 'Bentley', 'Bugatti', 'Lamborghini', 'Porsche'];
 let BMW = ['BMW', 'Mini', 'Rolls-Royce']; 
 let car = 'Lamborghini';
     console.log(car);
-    if(car ===VW[0] || car === VW[1] || car === VW[2] || car === VW[3] || car === VW[4] || car === VW[5]){
+    if(car == VW[0] || car == VW[1] || car == VW[2] || car == VW[3] || car == VW[4] || car == VW[5]){
         console.log('Priklauso VW');
-    } else if (car === BMW[0] || car === BMW[1] || car === BMW[2]){
+    } else if (car == BMW[0] || car == BMW[1] || car == BMW[2]){
         console.log('Priklauso BMW');
     } else {
         console.log('Nepriklauso niekam');
     }
 
+let turiTeise = true;
+let turiAuto = true;
+let blaivas = true;
 
+    if(turiTeise === true){
+        console.log('Vairuotojas turi teises');
+    } else {
+        console.log('Vairuotoja neturi teisių')
+    }
+
+
+if(turiTeise === true){
+    console.log('Vairuotojas turi teises');
+    if(turiAuto === true){
+        console.log('Vairuotojas turi automobilį');
+    } else {
+        console.log('Vairuotojas neturi automobolio');
+    }
+} else {
+    console.log('Vairuotoja neturi teisių')
+}
+
+if(turiTeise === true){
+    console.log('Vairuotojas turi teises');
+    if(turiAuto === true && blaivas === true){
+        console.log('Vairuotojas turi automobilį ir yra blaivas');
+    } else if(turiAuto === true && blaivas === false){
+        console.log('Vairuotojas turi auto bet vairuoti negali');
+    } else {
+        console.log('Vairuotojas automobilio neturi');
+    }
+} else {
+    console.log('Vairuotojas neturi teisių')
+}
+console.groupEnd();
+
+// 2 Harder assignment
+
+/* let name = prompt('Koks tavo vardas');
+window.alert('Labas' + name + '!');
+let city = prompt('Kokiame mieste gyveni?');
+if(city === 'Alytus'){
+    window.alert('Alytus labai miškingas');
+} else if (city === 'Vilnius' || city === 'Vilniuje'){
+    window.alert('Didžiausias Europinis miestas');
+} else if(city === 'Klaipėda'){
+    window.alert('Gyvenimas prie jūros');
+} else {
+    window.alert('Labai gražus miestas');
+} */
+
+let menuo = 'Sausis';
+if(menuo === 'Gruodis' || menuo === 'Sausis' || menuo === 'Vasaris'){
+    console.log('Žiema')
+} else if(menuo === 'Kovas' || menuo ===  'Balandis' || menuo ===  'Gegužė'){
+    console.log('Pavasaris')
+} else if(menuo === 'Birželis' || menuo ===  'Liepa' || menuo ===  'Rugpjūtis'){
+    console.log('Vasara')
+} else if(menuo === 'Rugsėjis' || menuo ===  'Spalis' || menuo ===  'Lapkritis'){
+    console.log('Ruduo')
+}
