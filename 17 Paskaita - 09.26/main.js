@@ -11,7 +11,7 @@
         Reikšmės neturi raktinio žodžio, o tik numeriuką, dėl to nėra aišku, kas ką reiškia.
         Eiliškumas LABAI svarbus.
         Masyvai dažniausiai naudojami kai norima vardinti vieno dalyko variacijas.
-    Tiek objektas, tiek masyvas yra konteineriniai kintamieji skirti talpnti 
+    Tiek objektas, tiek masyvas yra konteineriniai kintamieji skirti talpinti 
     kitus kintamuosius.
 */
 console.groupCollapsed('Objektai ir masyvai');
@@ -52,3 +52,316 @@ console.log('3', masinosMarkiuMasyvas[3]); // Volvo
 console.log('5', masinosMarkiuMasyvas[5]); // Undefined
 
 console.groupEnd();
+
+
+/* Nestinti masyvai ir objektai
+Kadangi masyvai ir objektai yra skirti talpinti kintamuosius, jie taip pat gali
+talpinti vieni kitus.
+1) masyvas masyve - [[]] Retai naudojamas.
+2) objektas ojekte - { raktZod:{} }
+3) masyvas objekte - { rektZod:[] }
+4) objektas masyve - [{}]
+*/
+console.groupCollapsed("Nestinti masyvai ir objektai");
+    console.group('Masyvas masyve');
+        let matrica = [
+            ['A', 'B', 'C'],
+            ['D', 'E', 'F'],
+            ['G', 'H', 'I']
+        ];
+        console.log(matrica);
+        console.log(matrica[0]);
+        console.log(matrica[1][2]);
+
+    console.groupEnd();
+    console.group('Objektas objekte');
+        let objektasObjekte = {
+            vardas: "Justinas",
+            amzius: 29,
+            plikas: false,
+            gyvenamojiVieta: {
+                miestas: 'Kaunas',
+                gatve: 'Karaliaus Mindaugo',
+                namoNr: 27,
+                butoNr: 32,
+                planeta: 'Žemė',
+                zemynas: 'Europa',
+                salis: 'Lietuva'
+            }
+        };
+        console.log(objektasObjekte);
+        console.log(objektasObjekte.vardas);
+        console.log(objektasObjekte.gyvenamojiVieta.gatve);
+
+    console.groupEnd();
+    console.group('Masyvas objekte');
+        let masyvasObjekte = {
+            vardas: 'Justinas',
+            amzius: 29,
+            dead: false,
+            pomegiai: ['skaityti', 'filmai', 'zaidimai', 'sportas', 'keliauti', 'dainuoti',
+            'kalnai', 'dviratis', 'miegas']
+        }
+        console.log(masyvasObjekte);
+        console.log(masyvasObjekte.pomegiai);
+        console.log(masyvasObjekte.pomegiai[7]);
+        console.log(masyvasObjekte.pomegiai[masyvasObjekte.pomegiai.length-1]);
+    console.groupEnd();
+    console.group('Objektas masyve');
+        let objektasMasyve = [
+            {
+                vardas: 'Justinas',
+                pavarde: 'Jadeska',
+                amzius: '29',
+                alkanas: true
+            }, {
+                vardas: 'Edmundas',
+                pavarde: 'Jadeska',
+                amzius: '57',
+                alkanas: false
+            }, {
+                vardas: 'Darius',
+                pavarde: 'Jadeska',
+                amzius: '34',
+                alkanas: true
+            }
+        ]
+        console.log(objektasMasyve);
+        console.log(objektasMasyve[2]);
+        console.log(objektasMasyve[2].vardas);
+
+    console.groupEnd();
+console.groupEnd();
+
+/*      Sąlygos / Conditions
+
+    Loginiai operatoriai
+        ! - NOT - apverčia reikšmę
+        && - AND - ar bent vienoje pusėje yra 'false', tokiu atveju grąžina 'false' 
+        || - OR - ar bent vienoje pusėje yra 'true;, tokiu atveju grąžiną 'true'
+
+    Truthy         /    Falsy
+        true       |   false
+        none zero  |   0
+        "string"   |   ""
+        object     |   undefined
+        array      |   null
+        function   |   NaN 
+
+    Sąlyos    
+        if else_if else
+
+
+    if(if'o sąlyga){
+        vykdomas jeigu if'o sąlyga yra tiesa
+    } else if (else if'o sąlyga) {
+        vykdoma jeigu ankščiau buvusios sąlygos buvo melai, o šitą sąlyga - tiesa
+    } else {
+        vykdomas TIK TUOMET jeigu visos prieš tai buvusios SĄLYGOS sąlygos buvo melai
+    }
+    
+*/
+/*
+let amzius = 17;
+console.log(amzius);
+if(amzius >= 18){
+    console.log('pilnametis');
+} else if(amzius < 18 && amzius >= 13){
+    console.log('paauglys');
+} else if(amzius < 13 && amzius >= 7){
+    console.log('mokyklinukas');
+} else if(amzius < 7 && amzius >= 2){
+    console.log('iki mokyklinis');
+} else if(amzius < 2 && amzius >= 0){
+    console.log('baby');
+} else {
+    console.log('Neteisingas amžiaus duomuo');
+}
+*/
+
+let amzius = 18;
+console.log(amzius);
+if(amzius >= 18){
+  console.log('pilnametis');
+} else if(amzius < 0){
+  console.log('Neteisingas amžiaus duomuo');
+} else if(amzius < 2){
+  console.log('baby');
+} else if(amzius < 7){
+  console.log('iki mokyklinis');
+} else if(amzius < 13){
+  console.log('mokyklinukas');
+} else if(amzius < 18){
+  console.log('paauglys');
+} else {
+  console.log('Neteisingas amžiaus duomuo');
+}
+
+
+//          Nest'intos sąlygos
+let amziusDar = 85;
+console.log(amziusDar);
+if(amziusDar >= 65){
+    console.log('Pensininkai');
+    if(amziusDar >= 90){
+        console.log('Prosenelis');
+    } else {
+        console.log('Ne prosenelis');
+    }
+} else if( amziusDar < 18){
+    console.log('Nepilnamečiai');
+    if(amziusDar > 13){
+        console.log('paauglys');
+    } else if (amziusDar >=7){
+        console.log('mokyklinukas');
+    } else {
+        console.log('iki mokyklinio amžiaus');
+    }
+} else if( amziusDar < 65){
+    console.log('Darbo amžius');
+} else {
+    console.log('Klaidingi duomenys');
+}
+
+console.log('--------------------------------------------');
+
+// UŽDUOTYS
+console.groupCollapsed('Užduotis');
+let asmuo = {
+    vardas: 'David',
+    pavarde: 'Goggins',
+    amzius: 48,
+    tautybe: 'Amerikietis',
+    lytis: 'vyras',
+    karys: true
+}
+
+let hobiai = ['Bėgimas', 'Savęs kankinimas', 'Mentorystė',
+ 'Anksti keltis', 'UFC', 'Amerikietiškas futbolas']
+
+console.log(asmuo);
+console.log(asmuo.pavarde)
+console.log(hobiai);
+console.log(hobiai[3]);
+console.groupEnd();
+
+console.groupCollapsed('MasyvasMasyve');
+    let luckyNumbers = [
+        [7, 14, 21, 28],
+        [35, 42, 49, 56],
+        [63, 70, 77, 84],
+        [91, 98, 105, 112]
+    ];
+    console.log(luckyNumbers);
+    console.log(luckyNumbers[2]);
+    console.log(luckyNumbers[3][2]);
+console.groupEnd();
+
+console.groupCollapsed('Autoriai');
+    let autoriai = [
+        {
+            vardas: 'George R.R. Martin',
+            amzius: 75,
+            knyga: 'Ledo ir ugnies giesmė',
+            hobis: 'žudyti veikėjus',
+            senas: true
+        }, {
+            vardas: 'Haruki Murakami',
+            amzius: 74,
+            knyga: 'Norvegų giria',
+            hobis: 'suklaidinti skaitytojus',
+            senas: true
+        }, {
+            vardas: 'J. K. Rowling',
+            amzius: 58,
+            knyga: 'Haris Poteris',
+            hobis: 'Magija',
+            sena: false
+        }, {
+            vardas: 'Stephen King',
+            amzius: 76,
+            knyga: 'Tas',
+            hobis: 'žiaurumas',
+            senas: true
+        }
+    ]
+    console.log(autoriai);
+    console.log(autoriai[3]);
+    console.log(autoriai[3].hobis);
+console.groupEnd();
+
+console.groupCollapsed('Asmenybė');
+    let asmenybe = {
+        vardas: 'Justinas',
+        pavarde: 'Jadeska',
+        amzius: 29,
+        gyvas: true,
+        zaidimai: ['Call of Duty', 'Diablo', 'Mortal Combat', 'God of War']
+    }
+    console.log(asmenybe);
+    console.log(asmenybe.zaidimai);
+    console.log(asmenybe.zaidimai[3]);
+console.groupEnd();
+
+console.groupCollapsed('Filmai');
+    let filmai = {
+        pavadinimas: 'The Lord of the Rings',
+        metai: 2001,
+        geras: true,
+        IMDB: 8.8,
+        kurejai: {
+            rezisierius: 'Peter Jackson',
+            scenaristas: 'J. R. R. Tolkien',
+            prodiuseris: 'Tim Sanders',
+            aktoriai: 14
+        }
+    };
+    console.log(filmai);
+    console.log(filmai.pavadinimas);
+    console.log(filmai.kurejai.aktoriai);
+console.groupEnd();
+
+// Sąlygos (simple)
+
+let legalAge = 20;
+let clientAge = 25;
+    console.log(legalAge);
+    if(clientAge >= legalAge){
+        console.log('Pasiekęs');
+    } else {
+        console.log('Nepasiekęs');
+    }
+
+let vardas = 'Justinas';
+    console.log(vardas);
+    if(vardas.length > 6){
+        console.log('Ilgas vardas');
+    } else {
+        console.log();
+    }
+
+let age = 29;
+    console.log(age);
+    if(age > 100 && age < 0){
+        console.log('Invalid Age');
+    } else if(age >= 1 && age <=18){
+        console.log('Child');
+    } else if(age >= 19 && age <=99){
+        console.log('Adult');
+    } else {
+        console.log();
+    }
+
+let VW = ['VW', 'Audi', 'Bentley', 'Bugatti', 'Lamborghini', 'Porsche'];
+let BMW = ['BMW', 'Mini', 'Rolls-Royce']; 
+let car = 'Lamborghini';
+    console.log(car);
+    if(car ===VW[0] || car === VW[1] || car === VW[2] || car === VW[3] || car === VW[4] || car === VW[5]){
+        console.log('Priklauso VW');
+    } else if (car === BMW[0] || car === BMW[1] || car === BMW[2]){
+        console.log('Priklauso BMW');
+    } else {
+        console.log('Nepriklauso niekam');
+    }
+
+
