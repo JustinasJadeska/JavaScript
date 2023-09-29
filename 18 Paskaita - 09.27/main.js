@@ -182,6 +182,15 @@ let kartai = 10;
 for(let i=0; i < kartai; i++){
     console.log(vardas);
 }
+
+for(let i=1; i < kartai; i++){
+    console.log(i + '.' + vardas);
+}
+
+for(let i=kartai; i >= 1; i--){
+    console.log(i);
+}
+
 console.groupEnd();
 
 // Harder
@@ -230,3 +239,4 @@ for (let i=0; i < skaiciai.length; i++){
         console.log(skaiciai[i]);
     }
 }
+
