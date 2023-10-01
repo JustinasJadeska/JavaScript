@@ -91,3 +91,142 @@ function number4(sk6, sk7, sk8){
 console.log(number4(5, 40, 60));
 
 console.groupEnd();
+
+// Events
+
+// 1) Padaryk, kad paspaudus ant mygtuko - išoktų alert su tavo vardu! (naudoti inline metoda: onclick="")
+
+function vardas() {
+    window.alert('Justinas');
+}
+
+// 2) Perrašyti pirmą pratimą su addEventListener (kaip visad ir reikės daryti).
+
+function koregavimas(){
+    window.alert('Justinas');
+}
+
+let button = document.querySelector('#vienas > button');
+console.dir(button);
+button.addEventListener('click', koregavimas);
+
+// 3) Padaryti, kad paspaudus ant mygtuko, po apačia atsirastų paragrafe tekstas apie jus.
+
+function koregavimasAntras(){
+    let sekcija = document.querySelector('#antras');
+    sekcija.children[3].innerHTML = 'Mano vardas Justinas. Man 29 metai. Miegas man labai patikti.';
+}
+
+let button2 = document.querySelector('#antras > button');
+console.dir(button2);
+button2.addEventListener('click', koregavimasAntras);
+
+// 4) Sukurk programą, kurioje bus h1 tekstas su
+// skaičiumi ir mygtukas. Paspaudus ant mygtuko, skaičius padidėja (+1).
+let number = 1;
+function koregavimasTrys() {
+    let sekcija2 = document.querySelector('#trys');
+    number++;
+    sekcija2.children[0].innerHTML = number;
+}
+
+let button3 = document.querySelector('#trys > button');
+button3.addEventListener('click', koregavimasTrys);
+
+//  5++) Sukurk programą, kurioje ilgas paragrafas. Bandant kopijuoti kodą - išmeta, kad negalima kopijuoti.
+function koregavimasKeturi(){
+    window.alert('Unable to copy');
+}
+
+let par = document.querySelector('#keturi > p');
+par.addEventListener('copy', koregavimasKeturi);
+
+// 6+) Sukurk programą, kur paspaudus ant mygtuko - 
+// sugeneruoja random skaičių nuo 1 iki 100 ir jį išmeta kaip h1 tekstą.
+let betkoks = [];
+function koregavimasPenki(){
+    let betkoks = Math.floor(Math.random() * 100) + 1;
+    let sekcija3 = document.querySelector('#penki');
+    sekcija3.children[0].innerHTML = betkoks;
+}
+
+let button4 = document.querySelector('#penki > button');
+button4.addEventListener('click', koregavimasPenki);
+
+// 7+) Sukurk programą, kurioje du mygtukai - "Turiu bent 18 metų" ir "Mažiau nei 18 metų". 
+// Jei paspaudžia ant pirmo mygtuko - išmeta h1 tekstą "Alus". Jei antrą paspaudžia - 
+// išmeta alert su "nepilnametis - užauk".
+
+function koregavimasSix() {
+    let sekcija4 = document.querySelector('#six');
+    sekcija4.children[0].innerHTML = 'Alus';
+}
+
+let button5 = document.querySelector('.bandymas');
+button5.addEventListener('click', koregavimasSix);
+
+function koregavimasSeven() {
+    let sekcija4 = document.querySelector('#six');
+    sekcija4.children[0].innerHTML = 'Nepilnametis - užauk';
+}
+
+let button6 = document.querySelector('.bandymas2');
+button6.addEventListener('click', koregavimasSeven);
+
+// 9) Parašykite programą, kurioje būtų tekstas "Do NOT click". 
+// Vartotojui paspaudus bet kokį mygtuką turi pasikeisti tekstas į "Pants are an illusion and so is death".
+
+function koregavimasNine(){
+    let sekcija5 = document.querySelector('#seven');
+    sekcija5.children[0].innerHTML = 'Pants are an illusion and so is death';
+}
+
+let button7 = document.querySelector('#seven > p');
+button7.addEventListener('click', koregavimasNine);
+
+// 10+) Sukurkite h1, jam duokite 100vh aukštį ir 100vh line-height. 
+// Jame įrašykite "Nejudinkite pelytės". Jeigu vartotojas pajudins pelytę - 
+// pakeiskite tekstą į "Why are you running?".
+
+function koregavimasTen(){
+    let sekcija6 = document.querySelector('#eight');
+    sekcija6.children[0].innerHTML = "Why are you running?";
+}
+
+let button8 = document.querySelector('#eight > h1');
+button8.addEventListener('mousemove', koregavimasTen);
+
+function koregavimasEleven(){
+    let sekcija6 = document.querySelector('#eight');
+    sekcija6.children[0].innerHTML = "Nejudink pelytės";
+}
+
+let button9 = document.querySelector('#eight > h1');
+button9.addEventListener('mouseout', koregavimasEleven);
+
+// 8++) Sukurk programą, kuri sugeneruoja random skaičių nuo 1 iki 3,
+// kai tik užsikrauna puslapis. Vartotojas skaičiaus nemato (bet jūs pasiconsole'inkit). 
+// Ekrane - trys mygtukai (1, 2, 3). Vartotojas turi spėti koks random skaičius susigeneravo.
+// Jei atspėja - išoka alert("Yay"), jei ne - alert("Nay").
+
+let skaicius = Math.floor(Math.random() * 3) + 1;
+console.log(skaicius);
+
+function koregavimasEight(sk1){
+    let spejimas = parseInt(sk1.target.innerHTML);
+
+    if (spejimas === skaicius) {
+        window.alert('Yay');
+    } else {
+        window.alert('Nay');
+    }
+}
+
+let button10 = document.querySelector('.one');
+button10.addEventListener('click', koregavimasEight);
+
+let button11 = document.querySelector('.two');
+button11.addEventListener('click', koregavimasEight);
+
+let button12 = document.querySelector('.three');
+button12.addEventListener('click', koregavimasEight);
