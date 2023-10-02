@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21 Paskaita</title>
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Metodai (Math, number, string, boolean)</h1>
+            <p>
+                Metodas - jau sukurta funkcija, kuri priklauso kažkuriam specifiniam elementui/kintamajam.
+            </p>
+            <p>
+                Savybė/Property - jau sukurta ir priskirta bei nekintanti reikšmė skirta kintamojo tipui.
+            </p>
+            <p>
+                Metodai - skirti tam, kad pagreitintų ar tai palengvintų programuotojų darbą.
+            </p>
+        </section>
+        <section>
+            <h2>Boolean</h2>
+            <h3>Metodai:</h3>
+            <ul>
+                <li>.toString() - paverčia į string tipo kintamąjį;</li>
+                <li>.valueOf() - grąžina kintamojo reikšmę;</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Number</h2>
+            <h3>Savybės/Properties:</h3>
+            <ul>
+                <li>Number.MAX_SAFE_INTEGER - su skaičiais iki šio skaičiaus, galima atlikti
+                    palyginimus.</li>
+                <li>Number.MIN_SAFE_INTEGER - </li>
+                <li>Number.POSITIVE_INFINITY - net ne skaičiaus pavidalo didžiausias įmanomas
+                    skaičius.
+                </li>
+                <li>Number.MAX_VALUE - vis dar skaičiaus pavidalas bet neapsakomai didelis.
+                    Palyginimai neveikia.
+                </li>
+                <li>Number.MIN_VALUE</li>
+                <li>Number.NEGATIVE_INFINITY</li>
+                <li>Number.EPSILON</li>
+                <li>Number.NaN</li>
+            </ul>
+            <h3>Metodai</h3>
+            <ul>
+                <li>Number.isInteger(skaičius) - tikrina ar skaičius sveikasis</li>
+                <li>Number.isSafeInteger(skaičius) - tikrina ar skaičius sveikasis ir  
+                    ne per didelis norint atlikti palyginimo operacijas. </li>
+                <li>Number.parseFloat(skaičius) - grąžina skaičius kaip skaičių, net jei šis buvo 
+                    paduotas string'o pavidalu. </li>
+                <li>Number.parseInt(skaičius) - grąžina skaičius kaip sveikąjį skaičių net jei šis buvo 
+                    paduotas string'o pavidalu. </li>
+                <li>skaicius.toFixed(number) - grąžina skaičius suapvalintą iki nurodyto 
+                    number kiekio skaitmenų už kablelio, string'o pavidalu. </li>
+                <li>...</li>
+            </ul>
+            <h2>Math</h2>
+            <h3>Savybė/Property</h3>
+            <ul>
+                <li>Math.PI - grąžina PI skaičių su ~15 skaitmenų po kablelio.</li>
+                <li>...</li>
+            </ul>
+            <h3>Metodai:</h3>
+            <ul>
+                <li>Math.cbrt(skaičius) - grąžina 'skaičius' kubinę šaknį.</li>
+                <li>Math.sqrt(skaicius) - grąžina 'skaičius' kvadratine šaknį.</li>
+                <li>Math.ceil(skaicius) - grąžina 'skaičius' suapvalintą į viršų.</li>
+                <li>Math.floor(skaičius) - grąžina 'skaičius' suapvalintą į apačią.</li>
+                <li>Math.round(skaicius) - grąžina 'skaičius' suapvalintą pagal apvalinimo taisykles.</li>
+                <li>Math.hypot(skaičius, skaičius2, skaičius3....) - grąžina 'skaičių' kvadratų 
+                    sumos kvadratinę šaknį. </li>
+                <li>Math.max(skaičius, skaičius2, skaičius3....) - grąžina didžiausią skaičių iš duotųjų 
+                    skaičių. </li>
+                <li>Math.min(skaičius, skaičius2, skaičius3....) - grąžina mažiausią skaičių iš duotųjų 
+                    skaičių.</li>
+                <li>Math.pow(skaičius, laipsnis) - grąžina 'skaičiu's pakeltą 'laipsnis' laipsniu.</li>
+                <li>Math.random(skaičius) - grąžina random skaičių tarp 0(neimtinai) ir 1(neimtinai).</li>
+                <li>Math.trunc(skaičius) - grąžina 'skaičius' be skaitmenų už kablelio.</li>
+                <li>...</li>
+            </ul>
+        </section>
+        <section>
+            <h2>String</h2>
+            <h3>Savybės/Properties</h3>
+            <ul>
+                <li>žodis.length - grąžina 'žodis' ilgį.</li>
+            </ul>
+            <h3>Metodai:</h3>
+            <ul>
+                <li>žodis.at(index) - grąžina simbolį esantį nurodytame indekse. Gali skaičiuoti 
+                    nuo pradžios arba nuo galo. </li>
+                <li>žodis.charAt(index) - grąžina simbolį esantį nurodytame indekse. Gali skaičiuoti 
+                    nuo pradžios. </li>
+                <li>žodis.charCodeAt(index) - grąžina simbolio, esančio nurodytame indekse kodą. </li>
+                <li>žodis.concat(zodis1, zodis2 ......) - grąžina zodis, zodis1, zodis2 .... 
+                    žodžių junginį, kaip vieną string'ą. NEMODIFIKUOJA pradinio string'o. </li>
+                <li>žodis.endsWith(reikšmė) - tikrina ar žodis baigiasi nurodyta reikšme. Grąžina 
+                    true arba false. </li>
+                <li>žodis.fromCharCode(number, number1 ......) - grąžina string'ą, kuris sudarytas iš 
+                    simbolių gautų pagal jų kodą (number, number1 .....). </li>
+                <li>žodis.includes(simbolis) - tikrina ar žodis viduje yra simbolis. Grąžina true arba false.</li>
+                <li>žodis.indexOf(simbolis, startIndex) - grąžina pirmojo rasto atitikmens poziciją, 
+                    judant nuo pradžios į galą arba stratIndex'o. </li>
+                <li>žodis.lastIndexOf(simbolis, startIndex) - grąžina pirmojo rasto atitikmens poziciją, 
+                    judant nuo galo į pradžią arba startIndex'o.</li>
+                <li>žodis.localeCompare(žodis, locale, options) - palygina 'žodis' ir 'žodis2' 
+                    pagal nurodytą kalbą (locale), su kažkokiais nustatymais.</li>
+                <li>žodis.match(regex) - tikrina ar žodis viduje yra nurodytos regex reikšmės. 
+                    Rastas reikšmes grąžina kaip masyvą (iterable iterator object).</li>
+                <li>žodis.matchAll()</li>
+                <li>žodis.padEnd(number, symbol) - padaro žodis number ilgio, jeigu šis yra per 
+                    trumpas, gale prideda symbol tol, kol pasieks reikiamą ilgį. </li>
+                <li>žodis.padStart(number, symbol) - padaro žodis number ilgio, jeigu šis yra per 
+                    trumpas, pradžioje prideda symbol tol, kol pasieks reikiamą ilgį.</li>
+                <li>žodis.repeat(number) - grąžina naują string'ą, kuriame žodis yra atkartotas number 
+                    kiekį kartų. </li>
+                <li>zodis.replace(symbol1, symbol2) - grąžina naują string'ą, kuriame zodis viduje esantis pirmasis symbol1 yra pakeičiamas į symbol2.</li>
+                <li>zodis.replaceAll(symbol1, symbol2) - grąžina naują string'ą, kuriame zodis viduje esantys symbol1 yra pakeičiami į symbol2.</li>
+                <li>zodis.search(regex) - grąžina poziciją pirmojo rasto regex atitikmens zodis viduje.</li>
+                <li>zodis.slice(index1, index2) - grąžina zodis viduje esančius simbolius tarp index1 ir index2.</li>
+                <li>zodis.substring(index1, index2) - grąžina zodis viduje esančius simbolius tarp index1 ir index2.</li>
+                <li>zodis.split(skirtukas) - sukarpo zodis į gabaliukus pagal skirtuką ir sudeda juos į masyvą, kurį grąžina.</li>
+                <li>zodis.toLowerCase() - grąžina zodis, kuriame visos raidės paverstos mažosiomis.</li>
+                <li>zodis.toUpperCase() - grąžina zodis, kuriame visos raidės paverstos didžiosiomis.</li>
+                <li>zodis.toLocaleLowerCase(locales) - grąžina zodis, kuriame visos raidės paverstos mažosiomis.</li>
+                <li>zodis.toLocaleUpperCase(locales) - grąžina zodis, kuriame visos raidės paverstos didžiosiomis.</li>
+                <li>zodis.trimStart() - naikina tuščius tarpus zodis pradžioje.</li>
+                <li>zodis.trimEnd() - naikina tuščius tarpus zodis pabaigoje.</li>
+                <li>zodis.trim() - naikina tuščius tarpus zodis pradžioje ir pabaigoje.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
