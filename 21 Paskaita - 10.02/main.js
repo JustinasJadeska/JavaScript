@@ -123,14 +123,33 @@ console.log(suma);
 
 // 21 Parašyti funkciją, kuriai padavus 4'tos užduoties masyvą, jinai sudėtų
 // kas kažkelintą (nurodyti funkcijai) kintamąjį ir išvestų sumą į konsolę.
-let sum2 = 0
-function add(three){
-    for (let i = 0; i < numbers.length; i+=three){
-        sum2 += numbers[i];
+function add(num, three){
+    let sum2 = 0;
+    for (let i = 0; i < num.length; i+=three){
+        sum2 += num[i];
     }
+    console.log(sum2);  // Turi consol'int už ciklo ribų.
 }
-add(5);
-console.log(sum2);
+add(numbers, 5);
+
+
+// 22 Parašyti funkciją, kuriai padavus 4'tos užduoties masyvą, 
+// jinai sudėtų kas kažkelintą (nurodyti funkcijai) kintamąjį tik 
+// tada, jeigu tas kintamasis yra lyginis arba nelyginis (nurodyti funkcijai) 
+// ir išvestų sumą į konsolę. Pvz.:(funk([1,2,3,4,5,6,7,8,9], 3, false) => 12)
+
+function kintamasis(mas, sk8, lyg){
+    let sum3 = 0
+    for (let i=0; i < mas.length; i+=sk8){;
+        if (mas[i] % 2 === lyg){  // (mas[i] % 2 === 1) nelyginė sąlyga
+            sum3 += mas[i]  // Sudėtis turi būti sąlygoje.
+        }
+    }
+    console.log(sum3);
+}
+kintamasis(numbers, 2, 1);
+
+
 
 // 23  Iš 5'tos užduoties masyvo atrinkite skaičius į vieną masyvą, o string'us į kitą.
 words = [];

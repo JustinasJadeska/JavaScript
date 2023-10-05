@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22 Paskaita</title>
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <main>
+        <section>
+          <h2>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>
+          </h2>
+          <h3>Savybės/Properties:</h3>
+          <ul>
+            <li>arejus.length - grąžino masyvo ilgį (iš kelių elementų masyvas yra sudarytas).</li>
+          </ul>
+          <h3>Metodai:</h3>
+          <ul>
+            <li>arejus.at(number) - grąžina masyvo number elementą.</li>
+            <li>arejus.concat(arejus1, arejus2...) - grąžina masyvų junginį.</li>
+            <li>arejus.fill(reiksme, nuo, iki) - užpildo masyvą reiksme'mis nuo nurodyto indekso iki nurodyto indekso. MODIFIKUOJA pradinį masyvą.</li>
+            <li>arejus.includes(reiksme) - tikrina ar bent vienas masyvo elementas yra lygus reiksme'i.</li>
+            <li>arejus.indexOf(reiksme, fromIndex) - grąžina kurioje pozicijoje masyve yra nurodyta reiksme. Galima pasirinkti nuo kurios pozicijos ieškoti. Jeigu neranda - grąžina -1.</li>
+            <li>arejus.lastIndexOf(reiksme, fromIndex) - grąžina kurioje pozicijoje masyve yra nurodyta reiksme. Ieško nuo galo judėdamas į pradžią. Galima pasirinkti nuo kurios pozicijos ieškoti. Jeigu neranda - grąžina -1.</li>
+            <li>arejus.join(skirtukas) - sujungia masyvą į string'ą, tarp masyvo elementų sudėdamas skirtukus. Grąžina naujai sugeneruotą string'ą.</li>
+            <li>arejus.toString() - tas pats kas join, tik be galimybės nusirodyti skirtuką.</li>
+            <li>arejus.pop() - išima reikšmę iš masyvo galo ir ją grąžina. MODIFIKUOJA pradinį masyvą.</li>
+            <li>arejus.push(reiksme) - prideda reikšmę į masyvo galą ir grąžina naują masyvo ilgį. MODIFIKUOJA pradinį masyvą.</li>
+            <li>arejus.shift() - išima reikšmę iš masyvo pradžios ir ją grąžina. MODIFIKUOJA pradinį masyvą.</li>
+            <li>arejus.unshift(reiksme) - prideda reikšmę į masyvo pradžią ir grąžina naują masyvo ilgį. MODIFIKUOJA pradinį masyvą.</li>
+            <li>arejus.reverse() - apsuka masyvą. MODIFIKUOJA pradinį masyvą.</li>
+            <li>arejus.toReversed() - apsuka masyvą. NEmodifikuoja pradinio masyvo.</li>
+            <li>arejus.slice(nuo, iki) - grąžina elementus nuo(imtiniai), iki(neimtinai) pozicijos.</li>
+            <li>arejus.splice(nuo, kiek, el1, el2, el3...) - iš pradinio masyvo, išima nuo nurodytos pozicijos, nurodytą kiekį elementų ir į tą vietą patalpina naujus išvardintus elementus. Grąžina išimtus elementus. MODIFIKUOJA pradinį masyvą.</li>
+            <li>arejus.toSpliced(...) - tas pats kas splice, tik kad NEmodifikuoja pradinio masyvo.</li>
+            <li>
+              arejus.sort(palyginimofunc) - grąžina surikiuotą masyvą nurodyta tvarka.MODIFIKUOJA pradinį masyvą.
+              dažniausia funkcija skaičiams: (a,b) => a-b
+              dažniausia funkcija žodžiams: (a,b) => a.localeCompare(b)
+            </li>
+            <li>arejus.toSorted(...) - tas pats kas sort, tik kad NEmodifikuoja pradinio masyvo.</li>
+            <li>arejus.with(index, reiksme) - grąžina naują masyvą su pakeista reiksme nurodytame indekse. NEmodifikuoja pradinio masyvo.</li>
+          </ul>
+        </section>
+        <section>
+            <h2>Object</h2>
+            <h3>Metodai:</h3>
+            <ul>
+                <li>Object.keys(objektas) - grąžina 'objektas' raktinius žodžius kaip string'ų masyvą.</li>
+                <li>...</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Funkcijos</h1>
+            <p>
+                Funkcija - kažkoks parašytas kodas, kurį galima iškviesti bet kuriuo momentu
+                ir bet kiek kartų. Funkcijos kodas nesivykdo kol ji nėra iškviesta.
+            </p>
+            <p>
+                Funkcijos aprašymas: function f_Vardas(sk1, sk2...){veiksmai}
+                Funkcijos iškvietimas: f_Vardas(arg1, arg2...);
+            </p>
+            <h2>Parametrai ir argumentai</h2>
+            <p>
+                Parametrai - funkcijos viduje naudojami duomenys, kurie yra gaunami funkcijos
+                iškvietimo metu.
+            </p>
+            <p>
+                Argumentai - perduodami duomenys kreipimosi į funkciją metu.
+            </p>
+        </section>
+        <section>
+            <h2>Callbakc</h2>
+            <p>
+                Callback - iškvietimas ir grįžtamasis ryšys.
+                Kai funkcija arba metodas, kreipiasi į kitą funkciją. 
+            </p>
+            <h2>Anonymous/Nameless Function / Anoniminės/Bevardės Funkcijos</h2>
+            <p>
+                Funkcijos, kurioms nėra priskirtas vardas. Kitaip pasakius, tai funkcijos, kurios egzistuoja tik kaip koks nors callback'as.
+            </p>
+            <h2>Arrow Function / Lambda</h2>
+            <p>
+                ES6 versijoje išleistas naujas bevardės funkcijos aprašymo būdas.
+            </p>
+            <p>
+                Norint sukurti vardinę funkciją naudojant arrow function, reikia sukurti kintamąjį, kuriam prilyginsi tą bevardę funkciją.
+            </p>
+            <h3>Arrow function užrašymo būdai</h3>
+            <ul>
+                <li>(par1, par2, par3...) => { veiksmai... }</li>
+                <li>par => { veiksmai... }</li>
+                <li>(par1, par2, par3...) => veiksmas</li>
+                <li>par => veiksmas</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./main.js" defer></script>
+</head>
+<body>
+</div>
+</section>
+<section> <!-- Destruktūrizavimas -->
+
+  <h1>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destruktūrizavimas</a>
+  </h1>
+  <p>
+    Destruktūrizuoti - tai išskaidyti kažką į atskiras dalis.
+  </p>
+  <p>
+    Destruktūrizuoti galima parametrus, masyvus ir objektus.
+  </p>
+  <p>
+    Pvz.: (JS kode 33-80)
+  </p>
+  <p>
+    Video:
+    <a href="https://youtu.be/NIq3qLaHCIs" target="_blank">WebDevSimplified</a>
+    <a href="https://youtu.be/UgEaJBz3bjY" target="_blank">FireShip</a>
+    <a href="https://youtu.be/-vR3a11Wzt0" target="_blank">freeCodeCamp</a>
+  </p>
+</section>
+<section> <!-- Iteraciniai masyvų metodai -->
+    <h1>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods" target="_blank">Masyvų iteraciniai metodai</a>
+      </h1>
+      <p>
+        Iteraciniai masyvų metodai yra tokie metodai, kur sukant ciklą per masyvą, galima kažką atlikti su kiekvienu to masyvo elementu.
+      </p>
+      <div> <!-- forEach -->
+        <h3>ForEach</h3>
+        <h4>Syntax:</h4>
+        <p>
+          masyvas.forEach((el)=>{ veiksmai... })
+          masyvas.forEach((el, i)=>{ veiksmai... })
+          masyvas.forEach((el, i, arr)=>{ veiksmai... })
+        </p>
+        <p>
+          ForEach metodas - suka ciklą per visą masyvą ir kiekvienos iteracijos metu atlieka kažkokius veiksmus su tos iteracijos masyvo elementu.
+          ForEach'as negali grąžinti reikšmės (neturi return). 
+          ForEach'as negali būti sustabdytas (neveikia break).
+        </p>
+      </div>
+      <div> <!-- filter -->
+        <h3>Filter</h3>
+        <h4>Syntax:</h4>
+        <p>
+          masyvas.filter((el)=>{ veiksmai... sąlyga })
+          masyvas.filter((el, i)=>{ veiksmai... sąlyga })
+          masyvas.filter((el, i, arr)=>{ veiksmai... sąlyga })
+        </p>
+        <p>
+          Filter metodas - suka ciklą per visą masyvą ir kiekvienos iteracijos metu tikrina ar iteracijos masyvo elementas atitinka sąlyga. Jeigu sąlyga grąžina tiesą - tas elementas yra grąžinamas kaip naujo masyvo dalis; Jeigu sąlyga grąžina melą - tas elementas nėra grąžinamas kaip naujo masyvo dalis.
+        </p>
+      </div>
+      <div> <!-- map -->
+        <h3>Map</h3>
+        <h4>Syntax:</h4>
+        <p>
+          masyvas.map((el)=>{ veiksmai... naujasPavidalas })
+          masyvas.map((el, i)=>{ veiksmai... naujasPavidalas })
+          masyvas.map((el, i, arr)=>{ veiksmai... naujasPavidalas })
+        </p>
+        <p>
+          Map metodas - suka ciklą per visą masyvą ir kiekvienos iteracijos metu kažkaip mutuoja iteracijos masyvo elementą ir grąžina jį nauju pavidalu.
+        </p>
+      </div>
+      <div> <!-- reduce -->
+        <h3>Reduce</h3>
+        <h4>Syntax:</h4>
+        <p>
+          masyvas.reduce((acc, curr) => { veiksmai... })
+          masyvas.reduce((acc, curr, i) => { veiksmai... })
+          masyvas.reduce((acc, curr, i, arr) => { veiksmai... })
+          masyvas.reduce((acc, curr) => { veiksmai... }, initialValue)
+          masyvas.reduce((acc, curr, i) => { veiksmai... }, initialValue)
+          masyvas.reduce((acc, curr, i, arr) => { veiksmai... }, initialValue)
+        </p>
+        <p>
+          Reduce metodas - suka ciklą per visą masyvą ir kiekvienos iteracijos metu su akumuliatoriumi(acc) (reikšmė, kurią grąžino praeitas ciklas) atlieka kažkokį veiksmą su dabartinės iteracijos masyvo elementu (curr). Metodo gale - grąžina vieną reikšmę, kuri yra kažkoks junginys visų reikšmių.
+          Jeigu yra nurodyta pradinė reikšmė (initialValue), tuomet pirmosios iteracijos metu akumuliatorius(acc) yra pradinė reikšmė(initialValue), o pirmasis masyvo elementas yra dabartinė reikšmė(curr).
+        </p>
+      </div>
+      <div> <!-- reduceRight -->
+        <h3>ReduceRight</h3>
+        <p>
+          Lygiai tas pats kas ir reduce, tik kad iš kito galo (right to left (rtl)).
+        </p>
+      </div>
+      <div> <!-- flatMap -->
+        <h3>FlatMap</h3>
+        <p>
+          Apjungtas flat(1) ir map metodai. Neturi galimybės keisti flat'o lygmens.
+        </p>
+      </div>
+      <div> <!-- Some -->
+        <h3>Some</h3>
+        <p>
+          Some metodas - suka ciklą per visą masyvą ir kiekvienos iteracijos metu tikrina ar bent vienas iteracijos masyvo elementas atitinka nurodytą sąlygą.
+          Jeigu bent vienas elementas atitinka nurodytą sąlygą - metodas grąžina true. Jeigu nei vienas elementas neatitinka nurodytos sąlygos - metodas grąžina false.
+        </p>
+      </div>
+      <div> <!-- Every -->
+        <h3>Every</h3>
+        <p>
+          Every metodas - suka ciklą per visą masyvą ir kiekvienos iteracijos metu tikrina ar kiekvienas vienas iteracijos masyvo elementas atitinka nurodytą sąlygą.
+          Jeigu kiekvienas elementas atitinka nurodytą sąlygą - metodas grąžina true. Jeigu bent vienas elementas neatitinka nurodytos sąlygos - metodas grąžina false.
+        </p>
+      </div>
+      <div> <!-- Find -->
+        <h3>Find</h3>
+        <p>
+          Find metodas - suka ciklą per visą masyvą ir kiekvienos iteracijos metu tikrina ar iteracijos masyvo elementas atitinka nurodytą sąlygą. 
+          Jeigu iteracijos masyvo elementas atitinka nurodytą sąlygą - yra grąžinamas tas elementas.
+          Jeigu nei vienas iteracijos masyvo elementas neatitinka nurodytos sąlygos - grąžinamas undefined.
+        </p>
+      </div>
+      <div> <!-- FindLast -->
+        <h3>FindLast</h3>
+        <p>
+          FindLast metodas daro tą patį ką Find tik nuo kito galo (right to left (rtl)).
+        </p>
+      </div>
+      <div> <!-- findIndex-->
+        <h3>FindIndex</h3>
+        <p>
+          FindIndex metodas - suka ciklą per visą masyvą ir kiekvienos iteracijos metu tikrina ar iteracijos masyvo elementas atitinka nurodytą sąlygą. 
+          Jeigu iteracijos masyvo elementas atitinka nurodytą sąlygą - yra grąžinamas to elemento indeksas.
+          Jeigu nei vienas iteracijos masyvo elementas neatitinka nurodytos sąlygos - grąžinamas -1.
+        </p>
+      </div>
+      <div> <!-- findLastIndex-->
+        <h3>FindLastIndex</h3>
+        <p>
+          FindLastIndex - daro tą patį ką ir findIndex, tik kad iš kito galo (right to left (rtl)).
+        </p>
+      </div>
+    </section>
+</body>
+</html>
