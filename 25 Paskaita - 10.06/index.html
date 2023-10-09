@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <header></header>
+  <main>
+    <section id="formHTML">
+      <h1>Formų tag'ai ir atributai</h1>
+      <div class="lists">
+        <div>
+          <h3>Tag'ai</h3>
+          <ul>
+            <li>form</li>
+            <li>input</li>
+            <li>textarea</li>
+            <li>select</li>
+            <li>option</li>
+            <li>label</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Atributai</h3>
+          <ul>
+            <li>type
+              <ul>
+                <li>text</li>
+                <li>password</li>
+                <li>number</li>
+                <li>email</li>
+                <li>date</li>
+                <li>url</li>
+                <li>range</li>
+                <li>checkbox</li>
+                <li>radio</li>
+                <li>submit</li>
+              </ul>
+            </li>
+            <li>placeholder</li>
+            <li>for</li>
+            <li>id</li>
+            <li>name</li>
+            <li>value</li>
+            <li>cols</li>
+            <li>rows</li>
+            <li>disabled</li>
+            <li>selected</li>
+            <li>checked</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="formPvz">
+        <h2>Pavyzdys</h2>
+        <form>
+          <div>
+            <label for="">Test</label>
+            <input type="text" id="" name="inputText">
+            <input type="radio" id="" name="" checked>
+            <input type="checkbox" id="" name="" checked>
+          </div>
+          <div>
+            <!-- <label></label> --> <!-- kartais -->
+            <textarea placeholder="test" rows="" cols="" id="" name="textareaText"></textarea>
+          </div>
+          <div>
+            <!-- <label></label> --> <!-- kartais -->
+            <select name="selectStuff" id="">
+              <option value="0">test0</option>
+              <option value="1" selected>test1</option>
+              <option value="2">test2</option>
+              <option value="3" disabled>test3</option>
+            </select>
+          </div>
+          <input type="submit" value="Pateikti Formą">
+        </form>
+      </div>
+    </section>
+    <section id="pvzKartu">
+        <form>
+          <input type="number" name="nr1" id="nr1">
+          <span>+</span>
+          <input type="number" name="nr2" id="nr2">
+          <input type="submit" value="=">
+        </form>
+        <span id="pvzKartuResult"></span>
+      </section>
+  </main>
+  <footer></footer>
+</body>
+</html>
