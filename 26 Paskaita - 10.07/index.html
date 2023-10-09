@@ -4,9 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./kartu.js"></script>
     <script src="./main.js" defer></script>
 </head>
 <body>
-    
+    <header></header>
+  <main>
+    <section> <!-- HTML formų validavimas -->
+      <h1>HTML formų validavimas</h1>
+      <p>
+        Formų validavimas yra reikalingas norint nustatyti kažkokius reikalavimus formos laukams (kitaip pasakius, įvesčių reikalavimus).<br>
+        Formų validacija neleidžia vartotojui pateikti formos, jeigu bent vienas iš formos laukų neatitinka nurodytos validacijos.
+      </p>
+      <ul>
+        <li>required</li>
+        <li>minlength - text/password/url/email</li>
+        <li>maxlength - text/password/url/email</li>
+        <li>min - number/date/range</li>
+        <li>max - number/date/range</li>
+        <li>step - number/range/date</li>
+        <li>pattern - password/tel</li>
+        <li>accept - file</li>
+        <li>multiple - file/email</li>
+      </ul>
+      <h3>Pavyzdys</h3>
+      <form id="validationPvz">
+        <div>
+          <label for="name">Vardas:</label>
+          <input type="text" name="name" id="name" minlength="3" maxlength="15">
+        </div>
+        <div>
+          <label for="age">Amžius:</label>
+          <input type="number" name="age" id="age" min="12" max="100" step="1">
+        </div>
+        <div>
+          <label for="phoneNr">Telefonas:</label>
+          <input type="tel" name="phoneNr" id="phoneNr" placeholder="+370 6xx xxxxx" pattern="(\+370\s6\d{2}\s\d{5})">
+        </div>
+        <div>
+          <label for="photo">Photo:</label>
+          <input type="file" name="photo" id="photo" accept=".png">
+        </div>
+
+        <input type="submit" value="Pateikti">
+      </form>
+    </section>
+    <section> <!-- DOM -->
+      <h1>Document Object Model</h1>
+      <h3>Node</h3>
+      <p>
+        Node'as - HTML elementas JS'o aplinkoje.
+      </p>
+      <p>
+        Daug geresnis būdas kurti HTML elementus per JS yra ne užpildant tėvinio elemento innerHTML'ą ar textContent'ą, bet kuriant Node'us kaip kintamuosius ir priskiriant juos vienus kitiems.
+      </p>
+      <h3>Node'ų metodai</h3>
+      <ul>
+        <li>createElement('tagVardas')</li>
+        <li>createTextNode('tekstas...')</li>
+        <li>kam.append(ką) - galima betką ir betkiek</li>
+        <li>kam.appendChild(ką) - galima TIK Node'ą</li>
+        <li>kam.setAttribute('name','value')</li>
+        <li>classList
+          <ul>
+            <li>add('klasesVardas','kitaKlase', ...)</li>
+            <li>remove('klasesVardas', 'kitaKlase', ...)</li>
+            <li>replace('klasesVardas', 'kitaKlase')</li>
+            <li>toggle('klaseViena')</li>
+          </ul>
+        </li>
+      </ul>
+      <div id="DOM_pvz"></div>
+    </section>
+    <section>
+        <h1>Pvz kartu</h1>
+        <div id="darom"></div>
+        <!-- <div class="kortele">
+            <h1>Pavadinimas</h1>
+            <img src="https://legendary-digital-network-assets.s3.amazonaws.com/wp-content/uploads/2021/12/12193230/The-Simpsons-Homer.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptatibus libero id optio nihil aliquid sint reprehenderit nostrum est, possimus omnis quas provident, accusamus repellendus praesentium harum corrupti accusantium nisi?</p>
+        </div> -->
+    </section>
+  </main>
+  <footer></footer>
 </body>
 </html>
