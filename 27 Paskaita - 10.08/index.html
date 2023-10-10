@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27 Paskaita</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section id="vardoTask"> <!-- Formos ir DOM -->
+            <h1>Formos ir DOM</h1>
+            <form>
+                <div>
+                    <label for="vardas">Vardas:</label>
+                    <input type="text" name="vardas" id="vardas">
+                </div>
+                <div>
+                    <label for="kartai">Kartai:</label>
+                    <input type="number" name="kartai" id="kartai">
+                </div>
+                <input type="submit" value="Spausdinti">
+            </form>
+            <div>
+
+            </div>
+        </section>
+        <section id="bilietoTask">
+            <h1>Kino bilieto įsigijimas</h1>
+            <form>
+                <div>
+                    <label for="name">Vardas:</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div>
+                    <label for="surname">Pavardė:</label>
+                    <input type="text" name="surname" id="surname" required>
+                </div>
+                <div>
+                    <label for="movie">Filmas:</label>
+                    <input list="movies" name="movie" id="movie" required>
+                    <datalist id="movies">
+                        <option value="The creator"></option>
+                        <option value="Gran Turismo"></option>
+                        <option value="Saw X"></option>
+                        <option value="The equalizer 3"></option>
+                        <option value="Slow"></option>
+                        <option value="Wild Heart"></option>
+                        <option value="The Nun 2"></option>
+                        <option value="A haunting in Venice"></option>
+                        <option value="Samsara"></option>
+                        <option value="Ladybug"></option>
+                        <option value="The secret kingdom"></option>
+                        <option value="I'm alive"></option>
+                    </datalist>
+                </div>
+                <div>
+                    <label for="date">Data ir laikas:</label>
+                    <input type="datetime-local" name="date" id="date" required>
+                </div>
+                <div>
+                    <label for="place">Vieta:</label>
+                    <input type="number" name="place" id="place" min="0" max="150" required>
+                </div>
+                <div>
+                    <label for="2D">2D</label>
+                    <input type="radio" name="screen" id="2D" value="2D" checked>
+                    <label for="3D">3D</label>
+                    <input type="radio" name="screen" id="3D" value="3D">
+                </div>
+                <input type="submit" value="Pirkti">
+            </form>
+            <h3>Bilietas:</h3>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
