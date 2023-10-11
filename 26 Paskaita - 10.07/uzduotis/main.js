@@ -41,7 +41,7 @@ tasksData[1].images.forEach( element => {
     const image = document.createElement('img');
     image.setAttribute('src', element);
 
-    tasks2.append(image);
+    tasks2.appendChild(image);
 });
 
 // 3)  Naudodamiesi tasksData[2] duomenimis atlikite šiuos veiksmus:
@@ -57,7 +57,7 @@ const headingText3 = document.createTextNode(tasksData[2].title);
 console.log(headingText3);
 heading3.appendChild(headingText3);
 
-task3.append(heading3);
+task3.appendChild(heading3);
 
 tasksData[2].works.forEach(element =>{
     const card = document.createElement('div');

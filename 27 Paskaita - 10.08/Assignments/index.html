@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section id="section1">
+            <form>
+                <div>
+                    <label for="image">Image URL:</label><br>
+                    <input type="text" name="image" id="image" required>
+                </div>
+                <div>
+                    <label for="name">Name:</label><br>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div>
+                    <label for="description">Description:</label><br>
+                    <textarea name="description" id="description" rows="5" cols="30" required></textarea>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+            
+        </section>
+        <section id="section2">
+            <form>
+              <label for="columns">Columns:</label>
+              <input type="number" name="columns" id="columns" value="0">
+              <label for="rows">Rows:</label>
+              <input type="number" name="rows" id="rows" value="0">
+              <input type="submit" value="Submit">
+            </form>
+          </section>
+          <hr>
+          <section id="section3">
+            <form>
+              <select id="colorSelect">
+                <option>Red</option>
+                <option>Green</option>
+                <option>White</option>
+                <option>Black</option>
+              </select>
+              <input type="submit" value="Remove">
+            </form>
+          </section>
+          <hr>
+          <section id="section4">
+            <form>
+              <label for="x">x:</label>
+              <input type="number" name="x" id="x" value="0">
+              <label for="y">y:</label>
+              <input type="number" name="y" id="y" value="0">
+              <label for="z">z:</label>
+              <input type="number" name="z" id="z" value="0"><br>
+              <label for="math">Select calculation:</label>
+              <select name="math" id="math">
+                <option value="Area">Area</option>
+                <option value="Perimeter">Perimeter</option>
+                <option value="Surface Area">Surface Area</option>
+                <option value="Volume">Volume</option>
+              </select>
+              <input type="submit" value="Calculate">
+            </form>
+            <div>
+              
+            </div>
+          </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
