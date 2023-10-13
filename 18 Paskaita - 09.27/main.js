@@ -88,7 +88,7 @@ console.groupEnd();
 //      for of (masyvams)
 /*
     for(left value of array/list){ veiksmai.... }
-    Naudojamas norint iteruoti per iteruojamą duomenį (dažniausiai masyvas bet agli būti 
+    Naudojamas norint iteruoti per iteruojamą duomenį (dažniausiai masyvas bet gali būti 
     kažkoks sąrašas).
 */
 

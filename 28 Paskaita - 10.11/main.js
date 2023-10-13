@@ -120,8 +120,8 @@ class Point {
         this.y = y;
         this.coordinates = [x, y];
     }
-    distance(){
-        return Math.hypot(this.coordinates[0], this.coordinates[1]);
+    distance(point){
+        return Math.hypot(this.x - point.x, this.y - point.y);
     }
 }
 const numbers = [
@@ -131,7 +131,7 @@ const numbers = [
     new Point(20, 10)
 ];
 
-console.log(numbers[1].distance());
+console.log(numbers);
 
 // document
 //     .querySelector('#fifth > form')
