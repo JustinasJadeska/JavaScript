@@ -1,0 +1,32 @@
+.bandymas {
+    font-size: 20px;
+    color: blueviolet;
+}
+
+.bandymas2 {
+    width: auto;
+    height: 300px;
+}
+
+.bandymas3 {
+    font-size: 30px;
+    font-family: fantasy;
+}
+
+.bandymas4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(170, 34, 50);
+}
+
+table {
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
