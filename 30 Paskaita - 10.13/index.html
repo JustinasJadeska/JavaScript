@@ -5,14 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praktika</title>
     <link rel="stylesheet" href="./main.css">
-    <script src="./main.js" type="module"></script>
+    <script src="./main.js" type="module" defer></script>
 </head>
 <body>
     <header></header>
     <main>
-        <section>
-            <div></div>
+        <section id="name">
+            <form>
+                <div>
+                    <input type="text" name="fullname" id="fullname" placeholder="Fullname">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                    </tr>
+                </thead>
+                <tbody id="results">
+                    <!-- <tr>
+                        <td>Name</td>
+                        <td>Surname</td>
+                    </tr> -->
+                </tbody>
+            </table><hr>
         </section>
+        <section id="assignment2">
+            <form>
+                <div>
+                    <label for="tripDestinationName">Trip Destination</label><br>
+                    <input type="text" name="tripDestinationName" id="tripDestinationName" placeholder="Destination name">
+                </div>
+                <div>
+                    <label for="tripLocation">Trip Location</label><br>
+                    <input type="text" name="tripLocation" id="tripLocation" placeholder="Location">
+                </div>
+                <div>
+                    <label for="tripLenght">Trip Lenght</label><br>
+                    <input type="text" name="tripLength" id="tripLength" placeholder="Length">
+                </div>
+                <div>
+                    <label for="tripPrice">Trip Price</label><br>
+                    <input type="text" name="tripPrice" id="tripPrice" placeholder="Price">
+                </div>
+                <div>
+                    <label for="imageURL">Image URL</label><br>
+                    <input type="text" name="imageURL" id="imageURL" placeholder="Image URL">
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+            <div id="result2">
+                <div id="container"></div>
+            </div>
+        </section><hr>
     </main>
     <footer></footer>
 </body>

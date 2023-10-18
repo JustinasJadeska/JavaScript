@@ -5,11 +5,17 @@ import { Any } from './modules/anyComponent.js';
 import { data3 } from './modules/bandymas.js';
 import { Lists } from './modules/listComponent.js';
 import { data2 } from './modules/bandymas.js';
+// import { data4 } from './modules/data.js';
 import { Select } from './modules/select.js';
-import { Table } from './modules/table.js';
+import { Fullname } from './modules/fullname.js';
+import { Trip } from './modules/assignment2.js';
 
-const table = new Table (4, 6);
-document.body.appendChild(table);
+// const table1 = new Fullname ('john', 'doe');
+// document.body.appendChild(table1);
+
+
+// const table = new Table (3, 6);
+// document.body.appendChild(table);
 
 const opti = new Select(data3, {class: 'bandymas'});
 // console.log(opti);

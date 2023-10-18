@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>32 paskaita - Duomenų saugojimas vartotojo dalyje</title>
+  <link rel="stylesheet" href="./main.css">
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <header></header>
+  <main>
+    <section>
+      <h1>Duomenų saugojimas vartotojo dalyje</h1>
+      <p>
+        Cookies, Session Storage ir Local Storage informacija yra saugojama jūsų įrenginyje/aplikacijoje/naršyklėje...<br>
+        Skirtingose svetainėse ir skirtingose naršyklėse Cookies/Session/Local Storage yra saugojama atskirai.
+      </p>
+      <img src="./images/cookieVsLocalVsSession.png" alt="cookie Vs Local Vs Session">
+    </section>
+    <section> <!-- cookies -->
+      <h1>Cookies</h1>
+      <p>
+        Ne sausainiai, bet duomenys saugojami svetainėje.
+      </p>
+      <p>
+        Saugojama iki 4kb.<br>
+        Reikia rankiniu būdu nustatyti iki kada duomenys yra saugojami.<br>
+        Siunčiami kartu su request'ais į back-end'ą.
+      </p>
+    </section>
+    <section> <!-- Session Storage -->
+      <h1>Session Storage</h1>
+      <p>
+        Laiko duomenis aplikacijoje/naršyklėje, per kurią atidaroma kažkuri svetainė, kuriai tie duomenys priskiriami.<br>
+        Kai pasibaigia sesija (kai yra išjungiama svetainė) šitie duomenys yra ištrinami.
+      </p>
+      <h3>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage">Storage</a>
+      </h3>
+      <ul>
+        <li>sessionStorage.setItem('raktas', 'reiksme')</li>
+        <li>sessionStorage.getItem('raktas')</li>
+        <li>sessionStorage.removeItem('raktas')</li>
+        <li>sessionStorage.clear()</li>
+        <li>sessionStorage.key(index)</li>
+        <li>sessionStorage.length</li>
+      </ul>
+    </section>
+    <section> <!-- Local Storage -->
+      <h1>Local Storage</h1>
+      <p>
+        Laiko duomenis aplikacijoje/naršyklėje, per kurią atidaroma kažkuri svetainė, kuriai tie duomenys priskiriami.<br>
+        Duomenys išsisaugoja per daugelį sesijų. Ištrinami gali būti tik naudojant atitinkamus metodus arba per dev tools.
+      </p>
+      <h3>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage">Storage</a>
+      </h3>
+      <ul>
+        <li>localStorage.setItem('raktas', 'reiksme')</li>
+        <li>localStorage.getItem('raktas')</li>
+        <li>localStorage.removeItem('raktas')</li>
+        <li>localStorage.clear()</li>
+        <li>localStorage.key(index)</li>
+        <li>localStorage.length</li>
+      </ul>
+    </section>
+    <section> <!-- JSON -->
+      <h1>JavaScript Object Notation (JSON)</h1>
+      <p>
+        JSON yra JavaScript objektų aprašymas string'ų pavidalu.<br>
+        JSON viduje viskas rašoma kaip kad būtų rašomas objektas, BET:<br>
+        1) JSON viduje negali būti metodų. Jeigu metodas yra, jis yra panaikinamas.<br>
+        2) JSON viduje visi žodžiai apart skaičių ir boolean'ų turi būti string'ai su dvigubomis kabutėmis.
+      </p>
+      <p>
+        Objektą galima paversti į JSON sintaksę arba JSON sintaksę galima paversti į Objektą naudojant atitinkamus metodus.
+      </p>
+      <h3>JSON Metodai</h3>
+      <ul>
+        <li>JSON.stringify(objektas)</li>
+        <li>JSON.parse(JSON_stringas)</li>
+      </ul>
+    </section>
+    <section>
+      <h1>Sporto salės</h1>
+      <form id="salesForma">
+        <div>
+          <label for="name">Sporto salės pavadinimas:</label>
+          <input type="text" id="name" name="name">
+        </div>
+        <div>
+          <label for="location">Sporto salės lokacija:</label>
+          <input type="text" id="location" name="location">
+        </div>
+        <div>
+          <label for="price">Sporto salės abonimento kaina:</label>
+          <input type="number" min="0" max="100" step="0.01" id="price" name="price">
+        </div>
+        <div>
+          <label for="photo">Sporto salės nuotrauka:</label>
+          <input type="url" id="photo" name="photo">
+        </div>
+        <input type="submit" value="Pateikti">
+      </form>
+      <div id="allGyms">
+
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+</html>

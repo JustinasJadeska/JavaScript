@@ -5,14 +5,19 @@
 // (kas be ko, galimybė suteikti tekstus ir atributus).
 
 export class Table {
-    constructor(rows, columns) {
+    constructor(rows, columns, atributas) {
       this.rows = rows;
       this.columns = columns;
+      this.atributas = atributas;
       return this.render();
     }
   
     render() {
       const table = document.createElement('table');
+
+      for (const attribute in this.atributas) {
+        table.setAttribute(attribute, this.atributas[attribute]);
+      }
   
       // Create the table head
       const tableHead = document.createElement('thead');
@@ -20,7 +25,6 @@ export class Table {
   
       for (let j = 0; j < this.columns; j++) {
         const header = document.createElement('th');
-        header.textContent = `Header ${j + 1}`;
         headRow.appendChild(header);
       }
   
@@ -35,7 +39,6 @@ export class Table {
   
         for (let j = 0; j < this.columns; j++) {
           const cell = document.createElement('td');
-          cell.textContent = `Row ${i + 1}, Column ${j + 1}`;
           row.appendChild(cell);
         }
   

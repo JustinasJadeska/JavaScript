@@ -1,0 +1,26 @@
+#allGyms{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .gymCard{
+    width: 300px;
+    height: 400px;
+    padding: 20px 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+  
+  .gymCard > h1{
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .gymCard > img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
