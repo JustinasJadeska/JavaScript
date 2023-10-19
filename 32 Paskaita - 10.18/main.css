@@ -1,0 +1,44 @@
+#tasks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+input:first-of-type {
+    border: 1px solid rgb(202, 202, 202);
+    padding: 10px 40px 8px 10px;
+}
+
+input:last-of-type {
+    border: none;
+    padding: 9px 20px;
+    color: white;
+    background-color: rgb(26, 137, 65);
+    font-weight: 800;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-left: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.task > button {
+    margin: 20px;
+    border: 1px solid rgb(255, 0, 0);
+    background-color: red;
+    border-radius: 3px ;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+
+
+

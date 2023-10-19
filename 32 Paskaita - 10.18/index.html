@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>32 Paskaita</title>
     <link rel="stylesheet" href="main.css">
-    <script src="./main.js" defer></script>
+    <script type="module" src="./main.js"></script>
 </head>
 <body>
     <header></header>
     <main>
-        <section></section>
+        <section id="tasks">
+            <form>
+                <div>
+                    <input type="text" name="toDo" id="toDo" placeholder="Add your task"><input type="submit" value="Add">
+                </div>
+                <div id="result"></div>
+                <div id="taskContainer"></div>
+            </form>
+        </section>
     </main>
     <footer></footer>
 </body>
