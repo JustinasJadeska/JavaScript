@@ -1,0 +1,99 @@
+/* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+#randomUser {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#randomUser > h1, #barborosPrekes > h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+#randomUser > div, #prekes > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: fit-content;
+}
+
+.userCard, #prekes > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.userCard > img, #prekes > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.userCard > p:first-of-type {
+    color: rgb(150, 150, 150);
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+}
+
+.userCard2 {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.userCard2 > h1 {
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.userCard2 > h1, p {
+    margin-bottom: 0;
+}
+
+.userCard2 > p {
+    color: rgb(25, 185, 140);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.userCard > .topRightCorner {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    color: red;
+} */
+
+.realEstate {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 300px;
+}
+
+#home {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.realEstate > p:last-of-type {
+    padding: 10px;
+    margin: 0;
+}
+
+.realEstate > p:first-of-type {
+    padding: 0 10px 10px 10px;
+    margin: 0;
+}
+
+.realEstate > h1 {
+    padding: 10px 10px 5px 10px;
+    margin: 0;
+}

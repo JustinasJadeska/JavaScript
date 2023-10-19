@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+    <link rel="stylesheet" href="./main.css">
+    <script type="module" src="./main.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section> <!--API-->
+            <h1>API</h1>
+            <p>
+                Application Programming Interface (API) - pateiktą užklausą iš aplikacijos (front-end)
+                išsiunčia į serverį (back-end) ir jeigu viskas tvarkoje - grąžina duomenis pagal pateiktą
+                užklausą, jeigu kažkas negerai - grąžina atitinkamą error žinutę.
+            </p>
+        </section>
+        <section> <!--Fetch-->
+            <h1>Fetch</h1>
+            <p>
+                Komanda/funckija/metodas, kurio pagalba mes galime siųsti užklausas į serverį. 
+            </p>
+            <h3>Fetch veikimo eiga</h3>
+            <ol>
+                <li>Fetch'inti (siūsti užklausą) duomenis, naudojant metodus:
+                    <ul>
+                        <li>GET - gauti informaciją. Default metodas.</li>
+                        <li>POST - pateikti informaciją</li>
+                        <li>DELETE - trinti informaciją</li>
+                        <li>PATCH - redaguoti informaciją</li>
+                        <li>PUT - redaguoti informaciją</li>
+                    </ul>
+                </li>
+                <li>Apdoroti gautą informaciją</li>
+                <li>Naudoti gautą informaciją</li>
+                <li>Pagaunam (catch) ir kažką atliekam su error (vykdosi tik error atveju)</li>
+                <li>Galiausiai (finally) dar kažką atliekam (vykdosi bet kokiu atveju)</li>
+            </ol>
+        </section>
+        <!-- <section id="randomUser">
+            <h1>Random User</h1>
+            <div></div>
+        </section> -->
+        <!-- <section id="barborosPrekes">
+            <h1>Papildyti prekes</h1>
+            <form>
+                <div>
+                    <label for="name">Pavadinimas:</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div>
+                    <label for="price">Kaina:</label>
+                    <input type="number" name="price" id="price" min="0" step="0.01">
+                </div>
+                <div>
+                    <label for="image">Nuotrauka:</label>
+                    <input type="url" name="image" id="image">
+                </div>
+                <input type="submit" value="Add item">
+            </form>
+            <hr>
+            <h1>Barboros prekės</h1>
+            <div id="prekes"></div>
+        </section> -->
+        <section id="realEstate">
+            <h1>Real estate</h1>
+            <form>
+                <div>
+                    <label for="price">Price:</label>
+                    <input type="number" name="price" id="price">
+                </div>
+                <div>
+                    <label for="city">City:</label>
+                    <input type="text" name="city" id="city">
+                </div>
+                <div>
+                    <label for="image">Image:</label>
+                    <input type="url" name="image" id="image">
+                </div>
+                <div>
+                    <label for="description">Description:</label><br>
+                    <textarea name="description" id="description" cols="30" rows="5"></textarea>
+                </div>
+                <input type="submit" value="Add">
+            </form>
+            
+            <div id="home"></div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
