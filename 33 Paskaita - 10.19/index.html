@@ -67,24 +67,30 @@
         </section> -->
         <section id="realEstate">
             <h1>Real estate</h1>
+            <h3>Add property</h3>
             <form>
                 <div>
-                    <label for="price">Price:</label>
-                    <input type="number" name="price" id="price">
+                    <label for="price">Price, EUR</label><br>
+                    <input type="number" name="price" id="price" placeholder="50000">
                 </div>
                 <div>
-                    <label for="city">City:</label>
-                    <input type="text" name="city" id="city">
+                    <label for="image">Img</label><br>
+                    <input type="url" name="image" id="image" placeholder="https://www.google.com/">
                 </div>
                 <div>
-                    <label for="image">Image:</label>
-                    <input type="url" name="image" id="image">
+                    <label for="description">Description</label><br>
+                    <textarea name="description" id="description" cols="30" rows="5" placeholder="Anything you would like to say"></textarea>
                 </div>
                 <div>
-                    <label for="description">Description:</label><br>
-                    <textarea name="description" id="description" cols="30" rows="5"></textarea>
-                </div>
-                <input type="submit" value="Add">
+                    <label for="city">City</label><br>
+                    <select id="city" name="city">
+                        <option value="Vilnius">Vilnius</option>
+                        <option value="Kaunas">Kaunas</option>
+                        <option value="Klaipeda">Klaipėda</option>
+                        <option value="Alytus">Alytus</option>
+                      </select>
+                </div><br>
+                <input type="submit" value="Add property">
             </form>
             
             <div id="home"></div>
