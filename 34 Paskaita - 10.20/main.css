@@ -1,0 +1,128 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+#assignment > h1, h3 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+#assignment > h4 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+#assignment > h1 {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+#assignment > h1:hover {
+    color: rgb(197, 73, 255);
+    background-color: black;
+    margin: 0;
+}
+
+#assignment > form {
+    margin: auto;
+    background-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+#assignment > form > div {
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: 500;
+}
+
+input {
+    margin-top: 5px;
+    padding: 10px 100px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 6px 10px 0 rgba(110, 19, 170, 0.434), 0 6px 20px 0 rgba(110, 8, 114, 0.651);
+}
+
+input:hover {
+    border: 2px solid rgb(134, 9, 172);
+}
+
+input[type=submit] {
+    border: none;
+    background-color: rgb(137, 40, 183);
+    font-weight: 600;
+    color: white;
+    border-radius: 3px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+input[type=submit]:hover {
+    background-color: blueviolet;
+}
+
+::placeholder {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#movies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* #movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+} */
+
+.card {
+    
+    height: auto;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(57, 57, 57, 0.345), 0 6px 20px 0 rgba(48, 48, 48, 0.336);
+}
+
+.card > img{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+.card > i:hover {
+    color: rgb(234, 83, 83);
+}
+
+.cardButton {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.cardButton > button {
+    border: none;
+    color: white;
+    background-color: rgb(159, 32, 202);
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+.cardButton > button:hover {
+    border: none;
+    color: white;
+    background-color: rgb(75, 14, 96);
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 3px;
+}

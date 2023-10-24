@@ -23,10 +23,12 @@ export class ToDo {
         checkbox.setAttribute('type', 'checkbox');
         checkbox.addEventListener('click', () => this.select(heading, checkbox));
 
-        const deleteTask = document.createElement('button');
-        const deleteTaskText = document.createTextNode('Delete');
-        deleteTask.appendChild(deleteTaskText);
-        deleteTask.addEventListener('click', () => this.deleteTask(taskDiv));
+        const deleteTask = document.createElement('i');
+        deleteTask.className = 'bi bi-trash3-fill';
+        deleteTask.addEventListener('click', () => {
+            this.deleteTask(taskDiv);
+            this.deleteLocalStorage();
+        });
 
         taskDiv.append(checkbox, heading, deleteTask);
 
@@ -51,5 +53,12 @@ export class ToDo {
             taskDiv.remove();
         }
     }
+    deleteLocalStorage () {
+        const storedTasks = JSON.parse(localStorage.getItem('taskData')) || []; // It uses JSON.parse to convert the stored data from a JSON string into a JavaScript array. If no data is found in localStorage, an empty array is created using || [].
+        const updatedTasks = storedTasks.filter(task => task.id !== this.id); //The filter method is used on the storedTasks array to create a new array called updatedTasks.
+        localStorage.setItem('taskData', JSON.stringify(updatedTasks)); //Finally, the updatedTasks array, which no longer contains the current task, is converted to a JSON string using JSON.stringify.
+    }
+
+    
 }
 

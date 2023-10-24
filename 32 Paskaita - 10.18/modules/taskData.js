@@ -2,20 +2,20 @@
 
 export const taskData = [
     {
+        id: 1,
         task: 'Išnešti šiukšles',
-        completed: false,
-        id: 1
+        completed: false
     }, {
+        id: 2,
         task: 'Nupirkti pieno',
-        completed: false,
-        id: 2
+        completed: false
     }, {
+        id: 3,
         task: 'Pavedžioti šunį',
-        completed: false,
-        id: 3
+        completed: false
     }, {
+        id: 4,
         task: 'Pamiegoti',
-        completed: false,
-        id: 4
+        completed: false
     }
 ];

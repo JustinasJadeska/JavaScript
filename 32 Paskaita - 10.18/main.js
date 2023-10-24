@@ -7,22 +7,51 @@ document
     .addEventListener('submit', event => {
     event.preventDefault();
 
-    const task = event.target.elements.toDo.value;
-    const newTask = new ToDo (task);
-        console.log(newTask);
+    const newTask = {
+        id: Date.now(),
+        task: event.target.elements.toDo.value,
+        completed: false   
+    };
+
+    const storedTasks = JSON.parse(localStorage.getItem('taskData')) ? JSON.parse(localStorage.getItem('taskData')) : [];
+    
+    storedTasks.push(newTask)
+    localStorage.setItem('taskData', JSON.stringify(storedTasks));
+
+    const newToDo = new ToDo (newTask.task, newTask.completed, newTask.id);
+    taskContainer.appendChild(newToDo);
+    
+    event.target.elements.toDo.value = ""; // Clear the input field
+
+    console.log(storedTasks);
+
     });
 
-// 3) Patobulinti aplikaciją taip, kad elementai būtų sukuriami iš duomenų kintamojo.
+const taskContainer = document.querySelector('#taskContainer');
 
-for (let i=0; i < taskData.length; i++) {
-    const data = taskData[i];
-    const naujas = new ToDo(data.task, data.completed, data.id);
-    console.log(naujas);
-    
-    document.querySelector('#taskContainer');
+taskData.forEach(data => {
+    const newToDo = new ToDo(data.task, data.completed, data.id);
+    taskContainer.appendChild(newToDo);
+});
+
+if(localStorage.getItem('taskData')){
+    const storedTasks = JSON.parse(localStorage.getItem('taskData'))
+
+    storedTasks.forEach(task => {
+        const newToDo = new ToDo(task.task, task.completed, task.id);
+        taskContainer.appendChild(newToDo);
+    })
 }
 
+// for (let i=0; i < taskData.length; i++) {
+//     const data = taskData[i];
+//     const newToDo = new ToDo(data.task, data.completed, data.id);
+//     console.log(newToDo);
+    
+    
+// }
 
+// console.log(taskData);
 
 
     

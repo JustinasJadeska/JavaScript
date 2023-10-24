@@ -29,6 +29,40 @@
                 <li>json-server --watch fileName.json</li>
             </ul>
         </section>
+        <section id="assignment">
+            <h1>Add movie</h1>
+            <form>
+                <div>
+                    <label for="movieName">Movie title</label><br>
+                    <input type="text" name="movieName" id="movieName" placeholder="Ace Ventura">
+                </div>
+                <div>
+                    <label for="genre">Genre</label><br>
+                    <input type="text" name="genre" id="genre" placeholder="Comedy">
+                </div>
+                <div>
+                    <label for="releaseDate">Release date</label><br>
+                    <input type="number" name="releaseDate" id="releaseDate" placeholder="2002">
+                </div>
+                <div>
+                    <label for="director">Director</label><br>
+                    <input type="text" name="director" id="director" placeholder="Tm Burton">
+                </div>
+                <div>
+                    <label for="mainActor">Main actor</label><br>
+                    <input type="text" name="mainActor" id="mainActor" placeholder="Jim Carrey">
+                </div>
+                <div>
+                    <label for="image">Image</label><br>
+                    <input type="url" name="image" id="image" placeholder="Add your image URL">
+                </div>
+                <input type="submit" value="Add movie">
+            </form>
+            <h3>Movies</h3>
+            <h4>Filter movies by genre:</h4>
+            <div id="button"></div>
+            <div id="movies"></div>
+        </section>
     </main>
     <footer></footer>
 </body>

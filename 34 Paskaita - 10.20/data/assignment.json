@@ -1,0 +1,78 @@
+{
+  "movies": [
+    {
+      "id": 2,
+      "name": "X-Men Origins: Wolverine",
+      "releaseDate": 2009,
+      "genre": "Action",
+      "director": "Gavin Hood",
+      "mainActor": "Hugh Jackman",
+      "image": "https://m.media-amazon.com/images/M/MV5BZWRhMzdhMzEtZTViNy00YWYyLTgxZmUtMTMwMWM0NTEyMjk3XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_FMjpg_UX1000_.jpg",
+      "goodMovie": true
+    },
+    {
+      "id": 3,
+      "name": "Captain America: The First Avenger",
+      "releaseDate": 2011,
+      "genre": "Adventure",
+      "director": "Joe Johnston",
+      "mainActor": "Chris Evans",
+      "image": "https://cdn.britannica.com/30/182830-050-96F2ED76/Chris-Evans-title-character-Joe-Johnston-Captain.jpg",
+      "goodMovie": true
+    },
+    {
+      "id": 1697797475529,
+      "name": "Avatar",
+      "releaseDate": 2009,
+      "genre": "Action",
+      "director": "James Cameron",
+      "mainActor": "Zoe Saldana",
+      "image": "https://m.media-amazon.com/images/S/pv-target-images/ae4816cade1a5b7f29787d0b89610132c72c7747041481c6619b9cc3302c0101.jpg"
+    },
+    {
+      "id": 1697814913600,
+      "name": "Forrest Gump",
+      "releaseDate": 1994,
+      "genre": "Drama",
+      "director": "Robert Zemeckis",
+      "mainActor": "Tom Hanks",
+      "image": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg"
+    },
+    {
+      "id": 1697965961479,
+      "name": "The Dark Knight",
+      "releaseDate": 2008,
+      "genre": "Crime",
+      "director": "Christopher Nolan",
+      "mainActor": "Heath Ledger",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg"
+    },
+    {
+      "id": 1697966119048,
+      "name": "Ace Ventura: Pet Detective",
+      "releaseDate": 1994,
+      "genre": "Comedy",
+      "director": "Tom Shadyac",
+      "mainActor": "Jim Carrey",
+      "image": "https://m.media-amazon.com/images/M/MV5BYmVhNmFmOGYtZjgwNi00ZGQ0LThiMmQtOGZjMDUzNzJhMGIzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpgges/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg"
+    },
+    {
+      "id": 1697966238235,
+      "name": "Five Feet Apart",
+      "releaseDate": 2019,
+      "genre": "Romance",
+      "director": " Justin Baldoni",
+      "mainActor": "Cole Sprouse",
+      "image": "https://m.media-amazon.com/images/M/MV5BNzVmMjJlN2MtNWQ4Ny00Zjc2LWJjYTgtYjJiNGM5MTM1ZTlkXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_.jpg"
+    },
+    {
+      "id": 1697966353525,
+      "name": "Se7en",
+      "releaseDate": 1995,
+      "genre": "Thriller",
+      "director": "David Fincher",
+      "mainActor": "Brad Pitt",
+      "image": "https://m.media-amazon.com/images/M/MV5BOTUwODM5MTctZjczMi00OTk4LTg3NWUtNmVhMTAzNTNjYjcyXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"
+    }
+  ]
+}
