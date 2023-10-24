@@ -52,47 +52,48 @@ export default class AutomobilioKortele{
     // console.log(this.props.id, heading, photo, metai, spalva, arDauzta);
 
     const modalas = new Modalas();
-
+    
     const formosName = document.createElement('h1');
     const formosNameText = document.createTextNode('Mašinos redagavimo forma');
     formosName.appendChild(formosNameText);
 
     const forma = new AutoRedagavimoForma(this.props);
 
-    modalas.append(formosName, forma);
-
     forma.addEventListener('submit', e => {
       e.preventDefault();
 
-    //   console.log(e.target.elements);
+      // console.log(e.target.elements);
       const formInputs = {
         marke: e.target.elements.marke.value,
         modelis: e.target.elements.modelis.value,
         metai: e.target.elements.metai.valueAsNumber,
-        spalva: e.target.elements.spava.value,
+        spalva: e.target.elements.spalva.value,
         arDauzta: e.target.elements.arDauzta.checked,
         photo: e.target.elements.photo.value
+      };
+      this.props = {
+        id: this.props.id,
+        ...formInputs
       }
-      console.log(formInputs);
+      // console.log(formInputs);
 
+      //      Pakeičiame ekrane
       heading.nodeValue = `${formInputs.marke} ${formInputs.modelis}`;
       photo.setAttribute('src', formInputs.photo);
-      photo.setAttribute('src', `${formInputs.marke} ${formInputs.modelis}`);
-
-      metai.nodeValue = "Metai: " + formInputs.metai;
+      photo.setAttribute('alt', `${formInputs.marke} ${formInputs.modelis}`);
+      metai.nodeValue = 'Metai: ' + formInputs.metai;
       spalva.style.backgroundColor = formInputs.spalva;
-      arDauzta.nodeValue = formInputs.arDauzta ? 'Dauzta' : 'Nedauzta';
-
-
-      fetch(`http://localhost:3000/automobiliai${this.props.id}`, {
+      arDauzta.nodeValue = formInputs.arDauzta ? 'Daužta' : 'Nedaužta';
+      //       Pakeičiame JSON serveryje
+      fetch(`http://localhost:3000/automobiliai/${this.props.id}`, {
         method: "PUT",
-        headers: {
-            "Content-Type":"application/json"
+        headers:{
+          "Content-Type":"application/json"
         },
-        body: JSON.stringify()
-      })
+        body: JSON.stringify(formInputs)
+      });
 
-      modalas.cloese();
+      modalas.close();
       modalas.remove();
     });
 

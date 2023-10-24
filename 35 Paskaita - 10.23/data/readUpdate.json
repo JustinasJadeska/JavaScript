@@ -37,13 +37,13 @@
       "photo": "https://hips.hearstapps.com/hmg-prod/images/2023-audi-tt-rs-iconic-edition-259-1669644591.jpg"
     },
     {
-      "id": 2,
       "marke": "BMW",
       "modelis": "9",
-      "metai": 2015,
-      "spalva": "#7CA0B4",
+      "metai": 2024,
+      "spalva": "#118dd0",
       "arDauzta": true,
-      "photo": "https://images.carexpert.com.au/resize/3000/-/app/uploads/2021/09/2022-BMW-iX-xDrive-i40-Mineral-White-HERO.jpg"
+      "photo": "https://images.carexpert.com.au/resize/3000/-/app/uploads/2021/09/2022-BMW-iX-xDrive-i40-Mineral-White-HERO.jpg",
+      "id": 2
     },
     {
       "id": 3,
