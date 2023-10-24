@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD praktika</title>
+    <link rel="stylesheet" href="./main.css">
+    <script type="module" src="./main.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section id="books">
+            <h1>Books</h1>
+            <h3>Add more books</h3>
+            <form>
+                <div>
+                    <label for="bookTitle">Book title</label><br>
+                    <input type="text" name="bookTitle" id="bookTitle" placeholder="The Lord of the Rings">
+                </div>
+                <div>
+                    <label for="author">Book author</label><br>
+                    <input type="text" name="author" id="author" placeholder="J. R. R. Tolkien">
+                </div>
+                <div>
+                    <label for="published">Published</label><br>
+                    <input type="number" name="published" id="published" placeholder="1954" max="2023">
+                </div>
+                <div>
+                    <label for="language">Language</label><br>
+                    <input type="text" name="language" id="language" placeholder="English">
+                </div>
+                <div>
+                    <label for="country">Country</label><br>
+                    <input type="text" name="country" id="country" placeholder="United Kingdom">
+                </div>
+                <div>
+                    <label for="genre">Genre</label><br>
+                    <input type="text" name="genre" id="genre" placeholder="Epic fantasy">
+                </div>
+                <div>
+                    <label for="image">Image</label><br>
+                    <input type="url" name="image" id="image" placeholder="Add your image URL">
+                </div>
+                <input type="submit" value="Add book">
+            </form>
+            <div id="cards"></div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

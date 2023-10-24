@@ -1,0 +1,48 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "A Song of Ice and Fire: A Game of Thrones",
+      "published": 1996,
+      "genre": "Epic fantasy",
+      "author": "George R.R. Martin",
+      "country": "United States",
+      "language": "English",
+      "image": "https://m.media-amazon.com/images/I/914uNuOXwSL._AC_UF1000,1000_QL80_.jpg",
+      "goodRead": true
+    },
+    {
+      "id": 2,
+      "title": "11/22/63",
+      "published": 2011,
+      "genre": "Science fiction, Suspense, Alternate history",
+      "author": "Stephen King",
+      "country": "United States",
+      "language": "English",
+      "image": "https://m.media-amazon.com/images/I/71gs-kmQgsL._AC_UF1000,1000_QL80_.jpg",
+      "goodRead": true
+    },
+    {
+      "id": 3,
+      "title": "1Q84",
+      "published": 2009,
+      "genre": "Novel, Fiction, Parralel universe in fiction",
+      "author": "Stephen King",
+      "country": "Japan",
+      "language": "Japanese",
+      "image": "https://m.media-amazon.com/images/I/81WaPTDslGL._AC_UF1000,1000_QL80_.jpg",
+      "goodRead": true
+    },
+    {
+      "id": 4,
+      "title": "Arch of Triumph",
+      "published": 1948,
+      "genre": "Novel, War story, Historical fiction",
+      "author": "Erich Maria Remarque",
+      "country": "United States",
+      "language": "German",
+      "image": "https://m.media-amazon.com/images/I/81fPBabRvAL._AC_UF1000,1000_QL80_.jpg",
+      "goodRead": true
+    }
+  ]
+}
