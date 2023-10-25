@@ -2,7 +2,7 @@
     string, number, boolean
 
     objektas/object - { raktinis Zodis:reiksme, kitasRAktinisZodis:reiksme }
-        Grupuoti kintamuosius. PO paskutinio elemento nedėti.
+        Grupuoti kintamuosius. PO paskutinio elemento nedėti kablelio.
         Reikšmės turi RAKTINIUS žodžius, pagal kuriuos galima suprasti reikšmės reikšmę.
         Eiliškumas nėra svarbus.
         Objektai dažniausiai naudojami kai reikšmes reikia kažkaip atskirti.
