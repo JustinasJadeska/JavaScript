@@ -3,6 +3,7 @@ import {Books} from './modules/BooksClass.js';
 fetch(`http://localhost:3000/books`)
 .then(res => res.json())
 .then(books => {
+    console.log(books)
     books.forEach(book => {
         const card = new Books(book);
         document.querySelector('#books > div').appendChild(card);
@@ -16,7 +17,7 @@ document
 
         const addBooks = {
             id: Date.now(),
-            title: event.target.elements.bookTitle.value,
+            title: event.target.elements.title.value,
             author: event.target.elements.author.value,
             published: event.target.elements.published.valueAsNumber,
             language: event.target.elements.language.value,

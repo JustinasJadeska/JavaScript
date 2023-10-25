@@ -65,7 +65,7 @@ export class Books {
 
         const form = new EditForm(this.props);
 
-        form.addEventListener('click', e => {
+        form.addEventListener('submit', e => {
             e.preventDefault();
 
             const formInputs = {
@@ -81,14 +81,14 @@ export class Books {
                 id: this.props.id,
                 ...formInputs
             }
-            heading.nodeValue = `${formInputs.title}`;
+            heading.nodeValue = formInputs.title;
             image.setAttribute('src', formInputs.image);
-            image.setAttribute('alt', `${formInputs.title}`);
-            published.nodeValue = formInputs.published;
-            language.nodeValue = formInputs.language;
-            author.nodeValue = formInputs.author;
-            country.nodeValue = formInputs.country;
-            genre.nodeValue = formInputs.genre;
+            image.setAttribute('alt', formInputs.title);
+            par.nodeValue = formInputs.published;
+            par2.nodeValue = formInputs.genre;
+            par3.nodeValue = formInputs.author;
+            par4.nodeValue = formInputs.country;
+            par5.nodeValue = formInputs.language;
 
             fetch(`http://localhost:3000/books/${this.props.id}`,{
                 method: "PUT",
@@ -97,7 +97,7 @@ export class Books {
                 },
                 body: JSON.stringify(formInputs)
             });
-            modal.closeModal();
+            modal.close();
             modal.remove();
         });
         modal.append(formName, form);

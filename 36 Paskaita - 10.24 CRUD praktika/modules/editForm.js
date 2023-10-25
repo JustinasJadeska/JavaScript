@@ -74,9 +74,9 @@ export class EditForm {
 
         const submitInput = document.createElement('input');
         submitInput.setAttribute('type', 'submit');
-        submitInput.setAttribute('value', 'Edit');
+        submitInput.setAttribute('value', 'Submit');
 
-        form.append(titleInput, authorInput, publishedInput, imageInput, languageInput, countryInput, genreInput);
+        form.append(titleInput, authorInput, publishedInput, imageInput, languageInput, countryInput, genreInput, submitInput);
 
         return form;
     }
